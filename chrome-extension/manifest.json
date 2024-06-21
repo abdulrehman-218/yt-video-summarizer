@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "YT Extension",
+  "version": "1.0",
+  "description": "Summarize Youtube video transcript",
+  "permissions": ["activeTab"],
+  "icons": {
+    "16": "images/download-icon.webp",
+    "48": "images/download-icon.webp",
+    "128": "images/download-icon.webp"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/download-icon.webp",
+      "48": "images/download-icon.webp",
+      "128": "images/download-icon.webp"
+    },
+    "default_popup": "popup.html"
+  }
+}

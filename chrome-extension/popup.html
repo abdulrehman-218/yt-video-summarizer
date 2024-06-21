@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YT Extension Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .popup {
+      max-width: 500px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+
+    .popup button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .popup button:hover {
+      background-color: #0056b3;
+    }
+
+    .popup div {
+      margin-top: 10px;
+    }
+  </style>
+  <script src="jquery.min.js"></script> 
+  <script src="popup.js"></script>
+</head>
+<body>
+  <div class="popup">
+    <h2>YouTube Extension Popup</h2>
+    <button id="extractBtn">Extract Video ID</button>
+    <div>Video ID: <span id="videoId"></span></div>
+    <div id="captions"></div>
+    <div id="summary"></div>
+  </div>
+</body>
+</html>
